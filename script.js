@@ -1,131 +1,131 @@
-// تفعيل ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+/* تنسيق الصفحة العام */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #1e3c72, #2a5298, #1e3c72);
+  background-size: cover;
+  color: #fff;
+  direction: rtl;
+  text-align: center;
+}
 
-// استخدام حدث "load" لضمان تحميل كل الموارد قبل بدء التحريك
-window.addEventListener('load', function() {
-  // 1. تأثير الظهور عند التمرير باستخدام GSAP
-  const elements = document.querySelectorAll('.animated');
-  
-  elements.forEach(element => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top bottom", // تعديل نقطة البداية لتضمن تشغيل الأنيميشن عند دخول العنصر الشاشة
-        toggleActions: "play none none reverse"
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power2.out"
-    });
-  });
-});
+/* خلفية الجسيمات */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-// 2. تأثير التمرير فوق العناصر (الكتب)
-const books = document.querySelectorAll('.book');
-books.forEach(book => {
-  book.addEventListener('mouseenter', () => {
-    gsap.to(book, {
-      scale: 1.05,
-      boxShadow: "0 0 20px rgba(52, 152, 219, 0.7)",
-      duration: 0.3
-    });
-  });
-  book.addEventListener('mouseleave', () => {
-    gsap.to(book, {
-      scale: 1,
-      boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
-      duration: 0.3
-    });
-  });
-});
+/* تنسيق الهيدر */
+header {
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
-// 3. تأثير التمرير فوق الروابط
-const links = document.querySelectorAll('.book a, .social-links a');
-links.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    gsap.to(link, {
-      scale: 1.1,
-      boxShadow: "0 0 15px rgba(52, 152, 219, 0.7)",
-      duration: 0.3
-    });
-  });
-  link.addEventListener('mouseleave', () => {
-    gsap.to(link, {
-      scale: 1,
-      boxShadow: "none",
-      duration: 0.3
-    });
-  });
-});
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
 
-// 4. إضافة خلفية جسيمات متحركة باستخدام particles.js
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 100,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": true
-    },
-    "size": {
-      "value": 3,
-      "random": true
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 2,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "repulse": {
-        "distance": 100,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      }
-    }
-  },
-  "retina_detect": true
-});
+/* تنسيق المحتوى الرئيسي */
+main {
+  padding: 20px;
+}
+
+/* ترتيب الكتب */
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* تنسيق كل كتاب */
+.book {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  width: 300px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* سيظهر بواسطة تأثير الـ GSAP */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.book h2 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.book p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+/* تنسيق روابط الكتب */
+.book a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.book a:hover {
+  background-color: #2980b9;
+}
+
+/* قسم "عن المؤلف" */
+.about {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+/* تنسيق الفوتر والشريط السفلي - بدون تعديل على روابط التواصل */
+footer {
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 20px;
+  color: #fff;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3498db;
+}
+
+/* الاستجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+  .books {
+    flex-direction: column;
+  }
+  .book {
+    width: 90%;
+  }
+}
