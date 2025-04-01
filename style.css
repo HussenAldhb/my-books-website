@@ -151,7 +151,7 @@ footer {
 .social-links a img {
   width: 24px;
   height: 24px;
-  border-radius: 50%; /* لجعل الصورة دائرية */
+  border-radius: 100%; /* لجعل الصورة دائرية */
 }
 
 /* الاستجابة للشاشات الصغيرة */
