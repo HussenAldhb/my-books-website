@@ -1,4 +1,4 @@
-// تفعيل Particles.js لخلفية الجسيمات المتحركة
+/* تفعيل Particles.js لخلفية الجسيمات المتحركة */
 particlesJS("particles-js", {
   "particles": {
     "number": {
