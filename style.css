@@ -4,32 +4,31 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(45deg, #1e3c72, #2a5298, #1e3c72);
-  background-size: cover;
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
   color: #fff;
   direction: rtl;
-  text-align: center;
+  text-align: right;
 }
 
-/* خلفية الجسيمات */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* تنسيق الهيدر */
 header {
   background-color: rgba(44, 62, 80, 0.9);
   padding: 20px;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* تنسيق المحتوى الرئيسي */
@@ -49,12 +48,11 @@ main {
 /* تنسيق كل كتاب */
 .book {
   background-color: rgba(255, 255, 255, 0.95);
-  color: #000;
+  color: #333; /* لون النص داكن للوضوح */
   width: 300px;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .book img {
@@ -63,13 +61,14 @@ main {
 }
 
 .book h2 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin: 10px 0;
 }
 
-.book p {
+.book p, .book ul {
   font-size: 1em;
   line-height: 1.4em;
+  color: #333;
 }
 
 /* تنسيق روابط الكتب */
@@ -91,39 +90,67 @@ main {
 /* قسم "عن المؤلف" */
 .about {
   background-color: rgba(255, 255, 255, 0.95);
-  color: #000;
+  color: #333;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* تنسيق الفوتر والشريط السفلي */
+/* تنسيق الفوتر */
 footer {
   background-color: rgba(44, 62, 80, 0.9);
   padding: 20px;
+  text-align: center;
   color: #fff;
+}
+
+/* تنسيق أزرار التواصل الاجتماعي مع تأثير خرافي */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .social-links a {
-  margin: 0 10px;
-  font-size: 1.5em;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px; /* حجم الزر */
+  height: 45px;
+  border-radius: 50%; /* شكل دائري */
+  background-color: #fff; /* خلفية افتراضية */
+  color: #333; /* لون الأيقونة الافتراضي */
   text-decoration: none;
-  transition: color 0.3s;
+  font-size: 1.5em; /* حجم الأيقونة */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #3498db;
+  transform: scale(1.2) rotate(10deg); /* تكبير وتدوير خفيف */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* توهج خرافي */
 }
+
+/* ألوان مميزة لكل منصة */
+.social-links a.facebook { background-color: #3b5998; color: #fff; }
+.social-links a.instagram { background-color: #e4405f; color: #fff; }
+.social-links a.twitter { background-color: #1da1f2; color: #fff; }
+.social-links a.threads { background-color: #ff4500; color: #fff; }
+.social-links a.tiktok { background-color: #000; color: #fff; }
+.social-links a.quora { background-color: #a82400; color: #fff; }
+.social-links a.github { background-color: #333; color: #fff; }
+.social-links a.linkedin { background-color: #0077b5; color: #fff; }
+.social-links a.discord { background-color: #7289da; color: #fff; }
 
 /* الاستجابة للشاشات الصغيرة */
 @media (max-width: 600px) {
   .books {
     flex-direction: column;
+    align-items: center;
   }
   .book {
     width: 90%;
   }
-}
+                             }
