@@ -149,14 +149,15 @@ footer {
   background-color: transparent;
 }
 
-/* تنسيق الصور داخل الأزرار */
+/* تنسيق الصور داخل الأزرار بحيث تكون متناسقة */
 .social-links a img {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%; /* لجعل الصورة دائرية */
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* الاستجابة للشاشات الصغيرة */
+/* استجابة الشاشات الصغيرة */
 @media (max-width: 600px) {
   .books {
     flex-direction: column;
