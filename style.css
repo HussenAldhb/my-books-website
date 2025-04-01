@@ -52,17 +52,32 @@ main {
   width: 300px;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ظل أعمق */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انتقال سلس */
 }
 
+.book:hover {
+  transform: translateY(-10px); /* رفع الكتاب عند التحويم */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* ظل أكبر لتأثير ثلاثي الأبعاد */
+}
+
+/* تنسيق غلاف الكتاب */
 .book img {
   max-width: 100%;
   border-radius: 5px;
+  border: 2px solid #3498db; /* إطار أنيق */
+  transition: transform 0.3s ease; /* انتقال سلس */
 }
 
+.book img:hover {
+  transform: scale(1.05); /* تكبير الغلاف عند التحويم */
+}
+
+/* تنسيق النصوص داخل الكتاب */
 .book h2 {
   font-size: 1.5em;
   margin: 10px 0;
+  color: #333;
 }
 
 .book p, .book ul {
@@ -153,4 +168,4 @@ footer {
   .book {
     width: 90%;
   }
-                             }
+}
