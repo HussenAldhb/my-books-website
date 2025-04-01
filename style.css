@@ -52,32 +52,17 @@ main {
   width: 300px;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ظل أعمق */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انتقال سلس */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.book:hover {
-  transform: translateY(-10px); /* رفع الكتاب عند التحويم */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* ظل أكبر لتأثير ثلاثي الأبعاد */
-}
-
-/* تنسيق غلاف الكتاب */
 .book img {
   max-width: 100%;
   border-radius: 5px;
-  border: 2px solid #3498db; /* إطار أنيق */
-  transition: transform 0.3s ease; /* انتقال سلس */
 }
 
-.book img:hover {
-  transform: scale(1.05); /* تكبير الغلاف عند التحويم */
-}
-
-/* تنسيق النصوص داخل الكتاب */
 .book h2 {
   font-size: 1.5em;
   margin: 10px 0;
-  color: #333;
 }
 
 .book p, .book ul {
@@ -151,13 +136,23 @@ footer {
 /* ألوان مميزة لكل منصة */
 .social-links a.facebook { background-color: #3b5998; color: #fff; }
 .social-links a.instagram { background-color: #e4405f; color: #fff; }
-.social-links a.twitter { background-color: #1da1f2; color: #fff; }
-.social-links a.threads { background-color: #ff4500; color: #fff; }
 .social-links a.tiktok { background-color: #000; color: #fff; }
 .social-links a.quora { background-color: #a82400; color: #fff; }
 .social-links a.github { background-color: #333; color: #fff; }
 .social-links a.linkedin { background-color: #0077b5; color: #fff; }
 .social-links a.discord { background-color: #7289da; color: #fff; }
+
+/* إزالة الخلفية للأزرار التي تستخدم الصور */
+.social-links a.threads, .social-links a.twitter {
+  background-color: transparent;
+}
+
+/* تنسيق الصور داخل الأزرار */
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* لجعل الصورة دائرية */
+}
 
 /* الاستجابة للشاشات الصغيرة */
 @media (max-width: 600px) {
@@ -168,4 +163,4 @@ footer {
   .book {
     width: 90%;
   }
-}
+  }
