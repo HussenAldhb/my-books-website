@@ -54,7 +54,6 @@ main {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0; /* سيظهر بواسطة تأثير الـ GSAP */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -98,10 +97,9 @@ main {
   padding: 20px;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
 }
 
-/* تنسيق الفوتر والشريط السفلي - بدون تعديل على روابط التواصل */
+/* تنسيق الفوتر والشريط السفلي */
 footer {
   background-color: rgba(44, 62, 80, 0.9);
   padding: 20px;
