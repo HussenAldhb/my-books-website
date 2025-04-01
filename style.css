@@ -65,7 +65,8 @@ main {
   margin: 10px 0;
 }
 
-.book p, .book ul {
+.book p,
+.book ul {
   font-size: 1em;
   line-height: 1.4em;
   color: #333;
@@ -143,7 +144,8 @@ footer {
 .social-links a.discord { background-color: #7289da; color: #fff; }
 
 /* إزالة الخلفية للأزرار التي تستخدم الصور */
-.social-links a.threads, .social-links a.twitter {
+.social-links a.threads,
+.social-links a.twitter {
   background-color: transparent;
 }
 
@@ -151,7 +153,7 @@ footer {
 .social-links a img {
   width: 24px;
   height: 24px;
-  border-radius: 100%; /* لجعل الصورة دائرية */
+  border-radius: 50%; /* لجعل الصورة دائرية */
 }
 
 /* الاستجابة للشاشات الصغيرة */
@@ -163,4 +165,4 @@ footer {
   .book {
     width: 90%;
   }
-  }
+}
