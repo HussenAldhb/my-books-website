@@ -107,7 +107,7 @@ footer {
   color: #fff;
 }
 
-/* تنسيق أزرار التواصل الاجتماعي مع تأثير خرافي */
+/* تنسيق أزرار التواصل الاجتماعي */
 .social-links {
   display: flex;
   justify-content: center;
@@ -119,37 +119,37 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px; /* حجم الزر */
-  height: 45px;
-  border-radius: 50%; /* شكل دائري */
-  background-color: #fff; /* خلفية افتراضية */
-  color: #333; /* لون الأيقونة الافتراضي */
+  width: 45px;         /* حجم الزر */
+  height: 45px;        /* حجم الزر */
+  border-radius: 50%;  /* شكل دائري */
+  background-color: #fff;  /* الخلفية الافتراضية */
+  color: #333;             /* لون الأيقونة الافتراضي */
   text-decoration: none;
-  font-size: 1.5em; /* حجم الأيقونة */
+  font-size: 1.5em;    /* حجم الأيقونة */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .social-links a:hover {
-  transform: scale(1.2) rotate(10deg); /* تكبير وتدوير خفيف */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* توهج خرافي */
+  transform: scale(1.2) rotate(10deg);  /* تكبير وتدوير خفيف */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);  /* تأثير توهج */
 }
 
 /* ألوان مميزة لكل منصة */
 .social-links a.facebook { background-color: #3b5998; color: #fff; }
 .social-links a.instagram { background-color: #e4405f; color: #fff; }
 .social-links a.tiktok { background-color: #000; color: #fff; }
-.social-links a.quora { background-color: #a82400; color: #fff; }
-.social-links a.github { background-color: #333; color: #fff; }
+.social-links a.quora  { background-color: #a82400; color: #fff; }
+.social-links a.github  { background-color: #333; color: #fff; }
 .social-links a.linkedin { background-color: #0077b5; color: #fff; }
 .social-links a.discord { background-color: #7289da; color: #fff; }
 
-/* إزالة الخلفية للأزرار التي تستخدم الصور */
+/* للأزرار التي تعتمد على صور (مثل X وThreads) إزالة الخلفية */
 .social-links a.threads,
 .social-links a.twitter {
   background-color: transparent;
 }
 
-/* تنسيق الصور داخل الأزرار بحيث تكون متناسقة */
+/* تنسيق الصور داخل الأزرار بحيث تكون بنفس حجم الأيقونات */
 .social-links a img {
   width: 1.5em;
   height: 1.5em;
